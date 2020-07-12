@@ -1,5 +1,14 @@
-class Main{
+import com.encapsulation.*;
+
+class Main {
     public static void main(String[] args){
-        System.out.println("Hello world");
+        try {
+        String workDir = System.getProperty("user.dir") + "/files";
+        FileStore store = new FileStore(workDir);
+        store.read(1);
+        } catch (Exception e){
+            
+            System.out.println("Oops \n" + e);
+        }
     }
 }
